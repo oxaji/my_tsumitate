@@ -1,0 +1,2 @@
+class Tsumitate < ApplicationRecord
+end
