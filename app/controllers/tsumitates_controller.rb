@@ -1,7 +1,7 @@
 class TsumitatesController < ApplicationController
 
   def index
-    @tsumitate = Tsumitate.all
+    @tsumitates = Tsumitate.all
   end
 
 end
