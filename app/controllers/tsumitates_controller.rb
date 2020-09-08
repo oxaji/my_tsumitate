@@ -5,6 +5,16 @@ class TsumitatesController < ApplicationController
   end
   
   def new
+    @tsumitate = Tsumitate.new
   end
-  
+
+  def create
+    Tsumitate.create(tsumitate_params)
+  end
+
+  private
+  def tsumitate_params
+    params.require(:tsumitate).permit(:name, :text)
+  end
+
 end
