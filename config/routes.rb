@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   root 'tsumitates#index'
-  resources :tsumitates, only: [:new, :create]
+  resources :tsumitates, only: [:new, :create, :destroy]
 end
