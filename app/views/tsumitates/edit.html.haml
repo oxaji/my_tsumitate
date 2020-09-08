@@ -1,0 +1,7 @@
+.main
+  = form_with(model: @tsumitate, local: true) do |form|
+    %h1
+      投稿する
+    = form.text_field :name, placeholder: "タイトル" 
+    = form.text_field :text, placeholder: "本文"
+    = form.submit "投稿"
