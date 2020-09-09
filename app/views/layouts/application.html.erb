@@ -11,8 +11,13 @@
 
   <body>
     <h1>my 積み立て</h1>
-
-    <%= link_to "投稿する", "tsumitates/new" %>
+    <% if user_signed_in? %>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <%= link_to "投稿する", "tsumitates/new" %>
+    <% else %>
+      <%= link_to "ログイン", new_user_session_path, class: "post "%>
+      <%= link_to "新規登録", new_user_registration_path, class: "post" %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
