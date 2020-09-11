@@ -1,5 +1,6 @@
-.main
+.mainindex
   -@tsumitates.each do |tsumitate|
+    .text
     =tsumitate.name
     =tsumitate.text
     =link_to '削除', "/tsumitates/#{tsumitate.id}", method: :delete
