@@ -1,7 +1,13 @@
 .mainindex
   -@tsumitates.each do |tsumitate|
     .text
-    =tsumitate.name
-    =tsumitate.text
-    =link_to '削除', "/tsumitates/#{tsumitate.id}", method: :delete
-    =link_to "編集", "/tsumitates/#{tsumitate.id}/edit", method: :get
+      .time
+        =l tsumitate.created_at
+      .name
+        =tsumitate.name
+      .text2
+        =tsumitate.text
+      .create
+        =link_to '削除', "/tsumitates/#{tsumitate.id}", method: :delete
+      .destroy
+        =link_to "編集", "/tsumitates/#{tsumitate.id}/edit", method: :get
