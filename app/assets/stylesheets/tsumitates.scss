@@ -3,6 +3,8 @@
     display: inline-block;
     width: 200px;
     text-align: center;
+    margin-right: 20px;
+    margin-top: 10px;
     .name{
       height: 40px;
       font-size: 20px;
@@ -16,6 +18,18 @@
       height: 60px;
       overflow: scroll;
 
+    }
+    .create{
+      a{
+        color: red;
+        text-decoration: none;
+      }
+    }
+    .destroy{
+      a{
+        color: green;
+        text-decoration: none;
+      }
     }
   }
 
