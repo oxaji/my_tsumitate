@@ -10,6 +10,7 @@ class TsumitatesController < ApplicationController
 
   def create
     Tsumitate.create(tsumitate_params)
+    redirect_to "/"
   end
   
   def destroy
@@ -24,6 +25,7 @@ class TsumitatesController < ApplicationController
   def update
     tsumitate = Tsumitate.find(params[:id])
     tsumitate.update(tsumitate_params)
+    redirect_to "/"
   end
 
   private
